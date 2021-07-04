@@ -11,7 +11,7 @@ class ContactView extends View
 
     function __construct()
     {
-        $this->setTitle("Contact PandemicPlates!");
+        $this->setTitle("Contact PandemicPlate!");
 
         $this->addLink("index.php", "Home");
         $this->addLink("how.php", "How To Make");
@@ -24,7 +24,7 @@ class ContactView extends View
         <div id="contactWidget" class="widget">
             <div class="contactRow">
                 <div class="contactLabel">Please address all concerns to:</div>
-                <div class="contactEmail">pandemicplate@gmail.com</div>
+                <div class="contactEmail">support@pandemicplate.com</div>
             </div>
         </div>
         <!-- <div id="icons" class="contactRow">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></div> -->

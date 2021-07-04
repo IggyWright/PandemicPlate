@@ -11,7 +11,7 @@ class HowView extends View
 
     function __construct()
     {
-        $this->setTitle("How We Make PandemicPlates!");
+        $this->setTitle("How To Make PandemicPlate!");
 
         $this->addLink("index.php", "Home");
         $this->addLink("how.php", "How To Make", true);

@@ -5,7 +5,7 @@ use PandemicPlates\Objects\User;
 
 class IndexView extends View{
     public function __construct() {
-        $this->setTitle("PandemicPlates!");
+        $this->setTitle("PandemicPlate!");
 
         $this->addLink("index.php", "Home", true);
         $this->addLink("how.php", "How To Make");
