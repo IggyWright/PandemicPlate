@@ -1,0 +1,53 @@
+#contactWidget{
+    justify-content: center;
+}
+
+.contactRow {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactLabel, .contactEmail {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 8vmin;
+    color: black;
+
+}
+
+.contactEmail {
+    font-size: 6vmin;
+    color: #43CD80;
+}
+
+#icons {
+    position: absolute;
+    top: 100%;
+    height: auto;
+    flex-direction: row;
+    white-space: pre;
+}
+
+/*When the screen height is less than 300px*/
+@media screen and (max-height: 300px) {
+    .contactLabel {
+        font-size: 21px;
+    }
+
+    .contactEmail {
+        font-size: 16px;
+    }
+
+    #icons {
+        top: 300px;
+    }
+}

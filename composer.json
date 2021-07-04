@@ -1,0 +1,8 @@
+{
+  "autoload": {
+    "psr-4": {"PandemicPlates\\": "lib/PandemicPlates"}
+  },
+  "require": {
+    "league/oauth2-google": "^3.0"
+  }
+}

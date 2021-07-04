@@ -1,0 +1,211 @@
+/*
+    Following will stylize the main View that each View extends
+*/
+@font-face {
+    font-family: Oswald;
+    src: url(/fonts/Oswald/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: Oswald-Bold;
+    src: url(/fonts/Oswald/Oswald-Bold.ttf);
+}
+
+:root {
+    --logo-height: 10vh;
+    --navigation-height: 10vh;
+    --widget-height: calc(100vh - var(--logo-height) - var(--navigation-height));
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Oswald;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    Style for the navigation bar and logo on top of page
+*/
+
+#navigation{
+    position: fixed;
+    width: 100%;
+    height: var(--navigation-height);
+    min-height: 50px;
+    z-index: 999;
+    top: var(--logo-height);
+    font-size: calc(16px + 1.5vmax);
+}
+
+#logo{
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: var(--logo-height);
+    z-index: 999;
+    background-color: white;
+    text-decoration: none;
+    color: #43CD80;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Oswald-Bold;
+    font-size: calc(16px + 1.5vmax);
+}
+
+#navigation ul{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    background-color: black;
+}
+
+#navigation ul li {
+    display: flex;
+    float: left;
+    height: 100%;
+    /* width: 12.5%; */
+}
+
+.navCell{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 100%;
+    background: black;
+    font-size: calc(16px + 1.5vmax);
+}
+
+#active.navCell {
+    background-color: #43CD80;
+    color: black;
+}
+
+#navigation .navCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 7px 0 7px;
+    width: 100%;
+}
+
+.navCell:hover:not(#active) {
+    background-color: #284942;
+}
+
+#navigation ul li#right {
+    float: right;
+}
+
+#dropdownNavigation {
+    width: 100%;
+    height: var(--navigation-height);
+    text-align: center;
+    background-color: black;
+    color: white;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: var(--logo-height);
+    cursor: pointer;
+    font-size: calc(16px + 1.5vmax);
+}
+
+#dropdownMenu {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#dropdownNavigation ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+#dropdownNavigation .navCell {
+    padding: 7px 0 7px 0;
+    justify-content: center;
+}
+
+.widget {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: calc(var(--logo-height) + var(--navigation-height));
+    height: var(--widget-height); /* set first val to number of widgets */
+    width: 100%;
+}
+
+@media screen and (max-height: 300px) {
+    body {
+        overflow: scroll;
+    }
+
+    #logo {
+        height: 30px;
+        font-size: 20px;
+    }
+
+    #navigation {
+        height: 30px;
+        top: 30px;
+        font-size: 18px;
+    }
+
+    #dropdownNavigation {
+        height: 30px;
+        top: 30px;
+        font-size: 18px;
+    }
+
+    .widget {
+        height: 240px;
+        top: 60px;
+    }
+
+}
+
+@media screen and (max-width: 150px) {
+    .widget {
+        overflow: scroll;
+    }
+}
+
+/*When the screen width is portrait*/
+@media all and (orientation: portrait) {
+    #navigation {
+        display: none;
+    }
+
+    #dropdownNavigation {
+        display: block;
+    }
+}
+
+/* @media all and (max-width: 150vmin) {
+    #navigation {
+        display: none;
+    }
+
+    #dropdownNavigation {
+        display: block;
+    }
+} */
