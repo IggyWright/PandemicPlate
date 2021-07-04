@@ -23,7 +23,7 @@ class ContactView extends View
         return <<< HTML
         <div id="contactWidget" class="widget">
             <div class="contactRow">
-                <div class="contactLabel">Please address all concerns to:</div>
+                <div class="contactLabel">Please address all feedback to:</div>
                 <div class="contactEmail">support@pandemicplate.com</div>
             </div>
         </div>
