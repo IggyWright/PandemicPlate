@@ -215,8 +215,8 @@
     align-items: center;
     /* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    /* -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%); */
     background-color: white;
 }
 
@@ -233,6 +233,19 @@
     text-align: center;
     line-height: 1.25;
     border-radius: 10px 0 0 10px;
+}
+
+.partContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.partLink {
+    /* text-decoration: none; */
+    margin-bottom: 10px;
+    color: black;
 }
 
 .instructionList {
@@ -299,6 +312,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
 }
 
 .zoomedTutorialMessage {
@@ -309,6 +323,7 @@
     justify-content: center;
     align-items: center;
     font-size: 6vmin;
+    text-align: center;
 }
 
 .zoomedTutorialImage {

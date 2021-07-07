@@ -365,6 +365,19 @@ HTML;
                 <div class="instructionList">
                     <ol>
 HTML;
+        if($id == "step1Aa") {
+            $html .= '<div class="partContainer">';
+            $html .= '<a class="partLink" href="/parts/Concrete/cement_base_45.stl">Concrete Mold STL (No Handle)</a>';
+            $html .= '<a class="partLink" href="/parts/Concrete/cement_handle_45.stl">Concrete Mold STL (Handle)</a>';
+            $html .= '</div>';
+        }
+
+        if($id == "step1Ba") {
+            $html .= '<div class="partContainer">';
+            $html .= '<a class="partLink" href="/parts/Rubber/rubber_base_45.stl">Rubber Mold STL (No Handle)</a>';
+            $html .= '<a class="partLink" href="/parts/Rubbe/rubber_handle_45.stl">Rubber Mold STL (Handle)</a>';
+            $html .= '</div>';
+        }
 
         for($step = 0; $step < count($steps); $step++) {
             $html .= '<li>';
